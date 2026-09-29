@@ -1,0 +1,9 @@
+.git
+.venv
+build
+frontend/node_modules
+frontend/dist
+data
+artifacts
+**/__pycache__
+**/*.exe
