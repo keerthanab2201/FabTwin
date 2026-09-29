@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+build/
+node_modules/
+frontend/dist/
+data/*
+!data/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+*.egg-info/
+.env
+.env.*
+!.env.example
+.deepeval/
+*.exe
+*.log

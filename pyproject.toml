@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fabtwin"
+version = "0.1.0"
+description = "Simulated semiconductor equipment twins and separate SECOM process analysis"
+requires-python = ">=3.10"
+dependencies = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "numpy>=1.26,<3", "pandas>=2.2,<3", "scikit-learn>=1.5,<2", "joblib>=1.4,<2"]
+
+[project.optional-dependencies]
+kafka = ["confluent-kafka>=2.6,<3"]
+test = ["pytest>=8,<9", "httpx>=0.27,<1"]
+
+[tool.setuptools.packages.find]
+include = ["backend*", "digital_twin*", "streaming*", "ml*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
